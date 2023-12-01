@@ -3,51 +3,51 @@
   flex-direction: column;
   width: 80%;
   margin: 40px auto; // Centrer le conteneur About
-  .collapse-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    margin: 0 auto; // Centrer le conteneur About
+}
 
-    .collapsible {
-      margin-bottom: 10px; // Espace entre les sections
-      &-header {
-        background-color: #ff6060; // Rouge
-        color: white;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between; // Espace entre le titre et l'icône
-        align-items: center; // Centre verticalement le titre et l'icône
-        cursor: pointer;
-        border-radius: 5px; // Coins arrondis
-        font-size: 1.2em;
-      }
+.collapse-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto; // Centrer le conteneur About
+}
 
-      &-icon {
-        font-size: 1.5em; // Taille de l'icône
-        display: flex; // Ajouté pour centrer verticalement l'icône
-        align-items: center; // Ajouté pour centrer verticalement l'icône
-        justify-content: center; // Ajouté pour centrer horizontalement l'icône
-        .svg-inline--fa {
-          // Classe spécifique pour les icônes FontAwesome
-          width: 32px;
-          height: 32px;
-        }
-      }
+.collapsible {
+  width: 100%;
+  margin-bottom: 10px; // Espace entre les sections
+}
 
-      &-content {
-        background-color: #f6f6f6; // Couleur de fond du contenu
-        color: #ff6060;
-        border-top: none; // Pas de bordure en haut
-        border-radius: 0 0 5px 5px; // Coins arrondis en bas
-        padding: 1em;
-        transition: all 0.3s ease; // Transition
-        p {
-          margin: 0;
-        }
-      }
-    }
+.collapsible-header {
+  background-color: #ff6060; // Rouge
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between; // Espace entre le titre et l'icône
+  align-items: center; // Centre verticalement le titre et l'icône
+  cursor: pointer;
+  border-radius: 5px; // Coins arrondis
+  font-size: 1.2em;
+}
+
+.collapsible-icon {
+  font-size: 1.5em; // Taille de l'icône
+}
+
+.collapsible-content {
+  color: #ff6060;
+  border-radius: 0 0 5px 5px; // Coins arrondis en bas
+  padding: 0 1em;
+  transition: all 0.3s ease; // Transition
+  max-height: 0; // Commencer avec max-height à 0 pour masquer le contenu
+  overflow: hidden; // Empêche le contenu de s'afficher lorsque max-height est à 0
+  p {
+    padding: 0;
   }
+}
+
+.collapsible-content.open {
+  max-height: 1000px; // Une hauteur maximale suffisamment grande pour montrer tout le contenu
+  background-color: #f6f6f6; // Couleur de fond du contenu
 }

@@ -5,9 +5,12 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 function App() {
+  // Définir le basename en fonction de l'environnement
+  const basename = import.meta.env.MODE === "production" ? "/Kasa/" : "";
+
   return (
     <div className="Page">
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <Header />
         {/* <Header /> */}
         <Routes>

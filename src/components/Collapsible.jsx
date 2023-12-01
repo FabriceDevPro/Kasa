@@ -13,7 +13,7 @@ const Collapsible = ({ title, children }) => {
         {title}
         <span className="collapsible-icon">{isOpen ? <MdExpandLess /> : <MdExpandMore />}</span>
       </div>
-      {isOpen && <div className="collapsible-content">{children}</div>}
+      <div className={`collapsible-content ${isOpen ? "open" : ""}`}>{children}</div>
     </div>
   );
 };
