@@ -1,0 +1,19 @@
+@use "utils/_Variables" as *;
+@use "utils/_Mixin" as Mixin;
+@use "utils/_Keyframes";
+@use "layout/loader";
+@use "layout/header";
+@use "layout/banner";
+@use "layout/footer";
+@use "pages/index";
+@use "pages/construction";
+@use "pages/legal_mentions";
+@use "components/bouton";
+@use "components/menu";
+@use "components/social";
+@use "components/scrollToTop";
+
+/* Styles CSS */
+/* $background-principal: #1e3758; */
+/* $background-secondaire: #e0e0e0; */
+/* #606061 */
