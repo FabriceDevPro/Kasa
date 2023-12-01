@@ -4,7 +4,8 @@
 @use "layout/loader";
 @use "layout/header";
 @use "layout/banner";
+@use "layout/navigation";
 @use "layout/footer";
 @use "pages/index";
-@use "components/bouton";
-@use "components/menu";
+@use "pages/home";
+@use "components/collapse";

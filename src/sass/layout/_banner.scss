@@ -1,0 +1,32 @@
+.Banner {
+  height: 223px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover; // S'assure que l'image de fond couvre entièrement l'espace
+  background-position: center; // Centre l'image de fond
+  position: relative; // Pour positionner correctement le texte par rapport à la bannière
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3); // Couleur de fond semi-transparente
+    border-radius: inherit; // Assure que l'arrière-plan a le même border-radius que le parent
+    mix-blend-mode: darken; // Mode de fusion pour assombrir
+  }
+
+  p {
+    position: relative; // Assure que le texte est au-dessus de l'arrière-plan semi-transparent
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 142.6%; /* 68.448px */
+    z-index: 1; // Assure que le texte reste au-dessus de l'arrière-plan après
+  }
+}

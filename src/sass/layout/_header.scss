@@ -1,0 +1,19 @@
+// 68px
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  padding-top: 45px;
+  gap: 50px;
+  .header_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .logo {
+    display: flex;
+    width: 210.322px;
+    height: 68px;
+  }
+}

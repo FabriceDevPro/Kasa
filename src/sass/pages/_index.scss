@@ -1,8 +1,16 @@
 body {
   font-family: "Open Sans", Arial, sans-serif;
-  background-color: #e0e0e0;
-  color: #1e3758;
-  margin: 10px auto;
+  // background-color: #e0e0e0;
+  // color: #1e3758;
+  margin: 0px auto;
   padding: 0;
   max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  .Page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

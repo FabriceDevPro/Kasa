@@ -1,0 +1,34 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: white;
+  height: 209px;
+  // padding: 66px 464px 29px 463px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  width: 100%;
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //   // width: 513px;
+    gap: 28.556px;
+    .logo {
+      width: auto;
+      height: 39.444px;
+    }
+    p {
+      text-align: center;
+      font-family: Montserrat;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+}

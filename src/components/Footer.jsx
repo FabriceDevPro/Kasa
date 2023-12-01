@@ -1,26 +1,21 @@
-import { Link } from "react-router-dom";
+import { Footer_Logo } from "../assets/images";
 
 const Footer = () => {
-  const anneeActuelle = new Date().getFullYear();
-  const anneeDebut = 2023;
-  let copyrightText = `© ${anneeDebut}`;
+  // const anneeActuelle = new Date().getFullYear();
+  // const anneeDebut = 2020;
+  // let copyrightText = `© ${anneeDebut}`;
 
-  if (anneeActuelle > anneeDebut) {
-    copyrightText += ` - ${anneeActuelle}`;
-  }
+  // if (anneeActuelle > anneeDebut) {
+  //   copyrightText += ` - ${anneeActuelle}`;
+  // }
 
-  copyrightText += ` Fabrice Magnan de Bellevue | FabWebProjects.fr | Tous droits réservés | `;
+  const copyrightText = ` © 2020 Kasa. All rights reserved `;
 
   return (
     <footer>
       <div className="footer-container">
-        <div className="left-section">{/* Autres éléments du footer si nécessaire */}</div>
-        <div className="right-section">
-          {copyrightText}
-          <Link to="/mentions-legales" className="legal-link">
-            Mentions Légales
-          </Link>
-        </div>
+        <img src={Footer_Logo} alt="Logo Kasa" className="logo" />
+        <p>{copyrightText}</p>
       </div>
     </footer>
   );

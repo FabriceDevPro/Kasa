@@ -1,35 +1,25 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+
 function App() {
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* Un Switch regarde à travers ses enfants Route et
-            rend le premier qui correspond à l'URL courante. */}
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <div className="Page">
+      <BrowserRouter>
+        <Header />
+        {/* <Header /> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          {/* path="*" fonctionne si jamais l'url ne correspond à rien de déclaré au dessus */}
+          <Route path="*" element={<Home />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 }
+
+export default App;

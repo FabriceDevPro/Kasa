@@ -1,0 +1,48 @@
+.Home {
+  display: flex;
+  justify-content: center; // Centrer le .card-container
+  align-items: flex-start; // Aligner les éléments en haut
+  border-radius: 25px;
+  background: #f6f6f6; // Couleur de fond du conteneur Home
+  width: 80%;
+  margin: 43px auto 50px; // Centrer le conteneur Home dans son parent
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 3 colonnes égales
+    gap: 50px 60px;
+    width: 100%; // Le conteneur des cartes prend toute la largeur
+    margin: 56px 50px 43px;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; // Aligner le contenu de la carte en bas
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(180deg, #ff6060 0%, /* Couleur vive en haut */ #d05252 50%, /* Une teinte intermédiaire plus foncée */ #a04040 100% /* Une couleur encore plus foncée en bas */);
+      height: 100%; // Hauteur définie pour permettre l'alignement en bas
+
+      .card-image {
+        width: 100%; // L'image prend toute la largeur de la carte
+        height: auto; // La hauteur de l'image est déterminée par son contenu
+        object-fit: cover; // S'assure que l'image couvre l'espace disponible sans déformation
+        flex-grow: 1; // L'image peut croître pour remplir l'espace disponible
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .card-title {
+        padding: 10px;
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%; /* 25.668px */
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+  }
+}
