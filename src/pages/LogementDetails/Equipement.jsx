@@ -1,17 +1,11 @@
 import PropTypes from "prop-types";
 
-const Equipments = ({ items }) => {
-  return (
-    <ul>
-      {items.map((item, index) => (
-        <li key={index}>{item}</li>
-      ))}
-    </ul>
-  );
+const Equipments = ({ text }) => {
+  return <p>{text}</p>;
 };
 
 Equipments.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+  text: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default Equipments;

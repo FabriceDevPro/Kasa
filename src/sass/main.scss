@@ -2,6 +2,8 @@
 @use "utils/_Mixin" as Mixin;
 @use "utils/_Keyframes";
 @use "base/typography";
+@use "components/collapse";
+@use "components/carousel";
 @use "layout/loader";
 @use "layout/header";
 @use "layout/banner";
@@ -12,4 +14,3 @@
 @use "pages/about";
 @use "pages/logementdetails";
 @use "pages/missing";
-@use "components/collapse";
