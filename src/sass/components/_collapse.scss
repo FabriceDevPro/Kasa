@@ -1,10 +1,3 @@
-#About {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  margin: 40px auto; // Centrer le conteneur About
-}
-
 .collapse-container {
   display: flex;
   flex-direction: column;
@@ -50,4 +43,15 @@
 .collapsible-content.open {
   max-height: 1000px; // Une hauteur maximale suffisamment grande pour montrer tout le contenu
   background-color: #f6f6f6; // Couleur de fond du contenu
+}
+
+@media (max-width: 1024px) {
+  .collapse-container {
+    width: 92%;
+  }
+}
+@media (max-width: 768px) {
+  .collapse-container {
+    width: 100%;
+  }
 }

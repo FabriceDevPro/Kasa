@@ -17,3 +17,15 @@ header {
     height: 68px;
   }
 }
+
+@media (max-width: 768px) {
+  header {
+    padding-top: 20px;
+    width: 95%;
+    gap: 27px;
+    .logo {
+      width: 145px;
+      height: 46.88px;
+    }
+  }
+}

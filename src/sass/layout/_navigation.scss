@@ -26,3 +26,13 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .navigation {
+    font-size: 12px;
+    text-transform: uppercase;
+    justify-content: space-around;
+    ul {
+      gap: 20px; // Espace entre les éléments de la liste
+    }
+  }
+}

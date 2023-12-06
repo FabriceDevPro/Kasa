@@ -15,6 +15,7 @@
     margin: 56px 50px 43px;
 
     .card {
+      cursor: pointer;
       display: flex;
       flex-direction: column;
       justify-content: flex-end; // Aligner le contenu de la carte en bas
@@ -43,6 +44,32 @@
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
       }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .Home {
+    background: none;
+    margin: 0;
+    width: 80%;
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); // 3 colonnes égales
+      gap: 50px 60px;
+      margin: 20px 0px 43px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .Home {
+    background: none;
+    margin: 0;
+    width: 95%;
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      margin: 20px 0px 43px;
     }
   }
 }

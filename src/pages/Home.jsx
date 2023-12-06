@@ -1,4 +1,4 @@
-import CardContainer from "./container/CardContainer";
+import CardContainer from "./Home/CardContainer";
 
 function Home() {
   return (

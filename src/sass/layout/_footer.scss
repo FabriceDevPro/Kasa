@@ -6,9 +6,6 @@ footer {
   background: black;
   color: white;
   height: 209px;
-  // padding: 66px 464px 29px 463px;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
   width: 100%;
 
   .footer-container {
@@ -29,6 +26,18 @@ footer {
       font-style: normal;
       font-weight: 500;
       margin: 0;
+    }
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    .footer-container {
+      width: 100px;
+      height: 46px;
+      gap: 28.556px;
+      p {
+        font-size: 12px;
+      }
     }
   }
 }

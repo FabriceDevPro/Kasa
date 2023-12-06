@@ -1,6 +1,7 @@
 @use "utils/_Variables" as *;
 @use "utils/_Mixin" as Mixin;
 @use "utils/_Keyframes";
+@use "base/typography";
 @use "layout/loader";
 @use "layout/header";
 @use "layout/banner";
@@ -8,4 +9,7 @@
 @use "layout/footer";
 @use "pages/index";
 @use "pages/home";
+@use "pages/about";
+@use "pages/logementdetails";
+@use "pages/missing";
 @use "components/collapse";
