@@ -52,6 +52,9 @@
   p {
     padding: 0;
   }
+  .no-bullets {
+    list-style-type: none;
+  }
 }
 
 @media (max-width: 1024px) {

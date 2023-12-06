@@ -53,7 +53,7 @@ const LogementDetails = () => {
             <Description text={accommodation.description} />
           </Collapsible>
           <Collapsible title="Équipements">
-            <Equipments text={accommodation.equipments} />
+            <Equipments items={accommodation.equipments} />
           </Collapsible>
         </div>
         {/* Autres détails du logement */}
