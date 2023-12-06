@@ -8,7 +8,7 @@ import LogementDetails from "./pages/LogementDetails";
 
 function App() {
   // Définir le basename en fonction de l'environnement
-  const basename = import.meta.env.MODE === "production" ? "/Kasa/Accueil" : "";
+  const basename = import.meta.env.MODE === "production" ? "/Kasa/" : "";
 
   return (
     <>
