@@ -5,12 +5,12 @@ const Navigation = () => {
     <nav className="navigation">
       <ul>
         <li>
-          <NavLink to="/" className={({ isActive }) => (isActive ? "nav-active" : "")}>
+          <NavLink to="/Accueil" className={({ isActive }) => (isActive ? "nav-active" : "")}>
             Accueil
           </NavLink>
         </li>
         <li>
-          <NavLink to="/about" className={({ isActive }) => (isActive ? "nav-active" : "")}>
+          <NavLink to="/APropos" className={({ isActive }) => (isActive ? "nav-active" : "")}>
             A Propos
           </NavLink>
         </li>

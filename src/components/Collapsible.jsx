@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { MdExpandMore, MdExpandLess } from "react-icons/md";
 import PropTypes from "prop-types";
 
 const Collapsible = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const contentRef = useRef(null);
 
-  const toggleOpen = () => setIsOpen(!isOpen);
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div className="collapsible">
@@ -13,7 +16,9 @@ const Collapsible = ({ title, children }) => {
         {title}
         <span className="collapsible-icon">{isOpen ? <MdExpandLess /> : <MdExpandMore />}</span>
       </div>
-      <div className={`collapsible-content ${isOpen ? "open" : ""}`}>{children}</div>
+      <div className={`collapsible-content ${isOpen ? "open" : ""}`} ref={contentRef} style={{ transform: isOpen ? "scaleY(1)" : "scaleY(0)" }}>
+        <div className="collapsible-inner">{children}</div>
+      </div>
     </div>
   );
 };
@@ -24,3 +29,5 @@ Collapsible.propTypes = {
 };
 
 export default Collapsible;
+
+// ... propTypes et export

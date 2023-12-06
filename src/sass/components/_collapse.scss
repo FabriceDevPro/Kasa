@@ -31,18 +31,27 @@
 .collapsible-content {
   color: #ff6060;
   border-radius: 0 0 5px 5px; // Coins arrondis en bas
-  padding: 0 1em;
-  transition: all 0.3s ease; // Transition
-  max-height: 0; // Commencer avec max-height à 0 pour masquer le contenu
-  overflow: hidden; // Empêche le contenu de s'afficher lorsque max-height est à 0
+  padding: 0 1em; // Ajoutez le padding ici pour l'inclure dans l'animation
+  transform-origin: top;
+  transition: transform 0.3s ease, height 0.3s ease;
+  overflow: hidden;
+  height: 0; //
+  &.open {
+    height: auto; // Quand le contenu est ouvert, la hauteur est automatique
+    padding-top: 1em; // Rétablissez le padding lorsque le contenu est ouvert
+    padding-bottom: 1em;
+    background-color: #f6f6f6;
+  }
+  .collapsible-inner {
+    transform: scaleY(0); // Commencez avec scaleY à 0 pour masquer le contenu
+  }
+
+  &.open .collapsible-inner {
+    transform: scaleY(1); // Utilisez scaleY pour animer la hauteur
+  }
   p {
     padding: 0;
   }
-}
-
-.collapsible-content.open {
-  max-height: 1000px; // Une hauteur maximale suffisamment grande pour montrer tout le contenu
-  background-color: #f6f6f6; // Couleur de fond du contenu
 }
 
 @media (max-width: 1024px) {
