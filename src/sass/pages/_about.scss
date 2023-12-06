@@ -1,18 +1,18 @@
-#About {
+.About {
   display: flex;
   flex-direction: column;
   width: 80%;
   margin: 40px auto; // Centrer le conteneur About
 }
 @media (max-width: 1024px) {
-  #About {
+  .About {
     width: 87%;
     margin: 30px auto; // Centrer le conteneur About
   }
 }
 
 @media (max-width: 768px) {
-  #About {
+  .About {
     width: 95%;
     margin: 20px auto; // Centrer le conteneur About
   }

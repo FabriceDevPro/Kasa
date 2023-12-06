@@ -8,6 +8,7 @@ import Rating from "./LogementDetails/Rating";
 import Description from "./LogementDetails/Description";
 import Equipments from "./LogementDetails/Equipement";
 import Carousel from "./LogementDetails/Caroussel";
+import PageTitle from "../components/PageTitle";
 
 const LogementDetails = () => {
   const { id } = useParams();
@@ -27,6 +28,7 @@ const LogementDetails = () => {
 
   return (
     <div className="LogementDetails">
+      <PageTitle title="Kasa - Logement Description" />
       <Carousel images={accommodation.pictures} title={accommodation.title} />
       <div className="description">
         <div className="description-information">

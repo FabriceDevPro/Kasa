@@ -1,8 +1,10 @@
 import Collapsible from "../components/Collapsible"; // Remplacez par le chemin réel vers votre composant
+import PageTitle from "../components/PageTitle";
 
-function About() {
+const About = () => {
   return (
-    <div id="About">
+    <div className="About">
+      <PageTitle title="Kasa - A Propos" />
       <div className="collapse-container">
         <Collapsible title="Fiabilité">
           <p>{"Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiés par nos équipes."}</p>
@@ -23,6 +25,6 @@ function About() {
       </div>
     </div>
   );
-}
+};
 
 export default About;
