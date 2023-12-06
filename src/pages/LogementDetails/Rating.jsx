@@ -1,15 +1,13 @@
 import PropTypes from "prop-types";
+import { FaStar } from "react-icons/fa6";
 
 const Rating = ({ value }) => {
-  // Créer un tableau d'étoiles basé sur la valeur
-  let stars = [];
-  for (let i = 0; i < value; i++) {
-    stars.push(
-      <span key={i} className="star">
-        ★
-      </span>
-    );
-  }
+  const totalStars = 5;
+
+  // Créer une liste d'étoiles basée sur la note
+  const stars = Array.from({ length: totalStars }, (_, index) => {
+    return <FaStar key={index} className={index < value ? "star filled" : "star"} />;
+  });
 
   return <div className="description-rating">{stars}</div>;
 };
