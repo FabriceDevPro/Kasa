@@ -6,6 +6,7 @@
   flex-direction: column;
   width: 80%;
   margin: 0 auto;
+  gap: 1.87rem;
 }
 
 .collapsible {
@@ -55,17 +56,24 @@
   }
 
   p {
+    margin: 0;
     padding: 0;
   }
 
   .no-bullets {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 2px;
+    }
   }
 }
 
 @include respond-to("tablet") {
   .collapse-container {
     width: 92%;
+    gap: 1.25rem;
   }
 }
 
