@@ -15,7 +15,7 @@
 
 .collapsible-header {
   background-color: $primary-color;
-  color: white;
+  color: $color-text;
   padding: 10px 20px;
   @include center-flex;
   justify-content: space-between;
@@ -41,7 +41,7 @@
     height: auto;
     padding-top: 1em;
     padding-bottom: 1em;
-    background-color: #f6f6f6;
+    background-color: $color-background;
   }
 
   .collapsible-inner {
