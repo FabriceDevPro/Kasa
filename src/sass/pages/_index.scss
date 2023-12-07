@@ -1,19 +1,15 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
 body {
-  font-family: "Open Sans", Arial, sans-serif;
-  // background-color: #e0e0e0;
-  // color: #1e3758;
-  margin: 0px auto;
+  margin: 0 auto;
   padding: 0;
-  max-width: 1440px;
-  display: flex;
-  justify-content: center;
+  max-width: $body-max-width;
+  @include center-flex;
+
   #root {
-    display: flex;
-    justify-content: center;
-    display: flex;
+    @include center-flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
   }
 }

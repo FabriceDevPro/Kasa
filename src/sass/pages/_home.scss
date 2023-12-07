@@ -1,18 +1,22 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+@use "../base/typography" as *;
+
 .Home {
   display: flex;
-  justify-content: center; // Centrer le .card-container
-  align-items: flex-start; // Aligner les éléments en haut
-  border-radius: 25px;
-  background: #f6f6f6; // Couleur de fond du conteneur Home
-  width: 80%;
-  margin: 43px auto 50px; // Centrer le conteneur Home dans son parent
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: $home-border-radius;
+  background: $home-bg-color;
+  width: $home-width;
+  margin: $home-margin;
 
   .card-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); // 3 colonnes égales
-    gap: 50px 60px;
-    width: 100%; // Le conteneur des cartes prend toute la largeur
-    margin: 56px 50px 43px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $card-gap;
+    width: 100%;
+    margin: $card-container-margin;
 
     .card {
       position: relative;
@@ -20,61 +24,58 @@
       display: flex;
       overflow: hidden;
       flex-direction: column;
-      justify-content: flex-end; // Aligner le contenu de la carte en bas
-      border-radius: 10px;
+      justify-content: flex-end;
+      border-radius: $card-border-radius;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-      height: 100%; // Hauteur définie pour permettre l'alignement en bas
+      height: 100%;
 
       .card-image {
-        width: 100%; // L'image prend toute la largeur de la carte
-        height: auto; // La hauteur de l'image est déterminée par son contenu
-        object-fit: cover; // S'assure que l'image couvre l'espace disponible sans déformation
-        flex-grow: 1; // L'image peut croître pour remplir l'espace disponible
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        flex-grow: 1;
+        border-top-left-radius: $card-border-radius;
+        border-top-right-radius: $card-border-radius;
       }
 
       .card-title {
-        position: absolute; // Positionnement absolu pour superposer sur l'image
-        bottom: 0; // Aligné au bas de la carte
-        width: 100%; // Assurez-vous que le titre s'étend sur toute la largeur
-        background: rgba(0, 0, 0, 0.3); // Fond légèrement transparent
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: $card-title-bg-color;
         padding: 10px;
-        color: #fff;
-        font-family: Montserrat;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 142.6%; /* 25.668px */
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
+        color: white;
+        font-family: $font-family-base;
+        font-size: $card-title-font-size;
+        font-weight: $font-weight-bold;
+        line-height: $card-title-line-height;
+        border-bottom-left-radius: $card-border-radius;
+        border-bottom-right-radius: $card-border-radius;
       }
     }
   }
-}
-@media (max-width: 1024px) {
-  .Home {
+  // Styles pour tablette
+  @include respond-to("tablet") {
     background: none;
     margin: 0;
-    width: 80%;
+    width: $home-width-tablet;
     .card-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); // 3 colonnes égales
-      gap: 50px 60px;
-      margin: 20px 0px 43px;
+      grid-template-columns: repeat(2, 1fr); // 2 colonnes pour tablette
+      gap: $card-gap-tablet;
+      margin: $card-container-margin-tablet;
     }
   }
-}
-@media (max-width: 768px) {
-  .Home {
+
+  // Styles pour mobile
+  @include respond-to("mobile") {
     background: none;
     margin: 0;
-    width: 95%;
+    width: $home-width-mobile;
     .card-container {
       display: flex;
       flex-direction: column;
-      gap: 22px;
-      margin: 20px 0px 43px;
+      gap: $card-gap-mobile;
+      margin: $card-container-margin-mobile;
     }
   }
 }

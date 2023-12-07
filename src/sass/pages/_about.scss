@@ -1,19 +1,19 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
 .About {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  margin: 40px auto; // Centrer le conteneur About
-}
-@media (max-width: 1024px) {
-  .About {
-    width: 87%;
-    margin: 30px auto; // Centrer le conteneur About
-  }
-}
+  width: $about-width;
+  margin: $about-margin;
 
-@media (max-width: 768px) {
-  .About {
-    width: 95%;
-    margin: 20px auto; // Centrer le conteneur About
+  @include respond-to("tablet") {
+    width: $about-width-tablet;
+    margin: $about-margin-tablet;
+  }
+
+  @include respond-to("mobile") {
+    width: $about-width-mobile;
+    margin: $about-margin-mobile;
   }
 }

@@ -1,18 +1,15 @@
 @keyframes spin {
-  0% {
+  from {
     transform: rotate(0deg);
   }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }
 
 @keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
+  to {
     opacity: 0;
-    display: none;
+    visibility: hidden;
   }
 }

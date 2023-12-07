@@ -1,42 +1,42 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+@use "../base/typography" as *;
+
 footer {
-  display: flex;
+  @include center-flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: black;
-  color: white;
-  height: 209px;
+  background: $footer-bg-color;
+  color: $footer-text-color;
+  height: $footer-height;
   width: 100%;
 
   .footer-container {
-    display: flex;
+    @include center-flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    //   // width: 513px;
-    gap: 28.556px;
+    gap: $footer-gap;
+
     .logo {
       width: auto;
-      height: 39.444px;
+      height: $footer-logo-height;
     }
+
     p {
       text-align: center;
-      font-family: Montserrat;
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 500;
+      font-family: $font-family-base;
+      font-size: $footer-font-size;
+      font-weight: $font-weight-bold;
       margin: 0;
     }
   }
-}
-@media (max-width: 768px) {
-  footer {
+
+  @include respond-to("mobile") {
     .footer-container {
-      width: 100px;
-      height: 46px;
-      gap: 28.556px;
+      width: $footer-container-mobile-width;
+      height: $footer-container-mobile-height;
+      gap: $footer-gap;
+
       p {
-        font-size: 12px;
+        font-size: $footer-font-size-mobile;
       }
     }
   }

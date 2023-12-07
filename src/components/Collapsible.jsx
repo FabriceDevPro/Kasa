@@ -25,7 +25,7 @@ const Collapsible = ({ title, children }) => {
         aria-expanded={isOpen}
         aria-controls={contentId}>
         {title}
-        <span className="collapsible-icon">{isOpen ? <MdExpandLess /> : <MdExpandMore />}</span>
+        <span className="collapsible-icon">{isOpen ? <MdExpandMore /> : <MdExpandLess />}</span>
       </div>
       <div id={contentId} className={`collapsible-content ${isOpen ? "open" : ""}`} ref={contentRef} style={{ transform: isOpen ? "scaleY(1)" : "scaleY(0)" }}>
         <div className="collapsible-inner">{children}</div>

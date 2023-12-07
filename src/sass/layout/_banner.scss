@@ -1,12 +1,14 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+@use "../base/typography" as *;
+
 .Banner {
-  height: 223px;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover; // S'assure que l'image de fond couvre entièrement l'espace
-  background-position: center; // Centre l'image de fond
-  position: relative; // Pour positionner correctement le texte par rapport à la bannière
+  height: $banner-height;
+  border-radius: $banner-radius;
+  @include center-flex;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 
   &:after {
     content: "";
@@ -15,30 +17,26 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.3); // Couleur de fond semi-transparente
-    border-radius: inherit; // Assure que l'arrière-plan a le même border-radius que le parent
+    background: $banner-bg-overlay;
+    border-radius: inherit;
     mix-blend-mode: darken;
   }
 
   p {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative; // Assure que le texte est au-dessus de l'arrière-plan semi-transparent
-    color: #fff;
-    font-family: Montserrat;
-    font-size: 48px;
-    font-weight: 500;
-    line-height: 142.6%; /* 68.448px */
-    z-index: 1; // Assure que le texte reste au-dessus de l'arrière-plan après
+    @include center-flex;
+    position: relative;
+    color: $banner-text-color;
+    font-family: $font-family-base;
+    font-size: $banner-text-size;
+    font-weight: $font-weight-bold;
+    line-height: $font-line-height;
+    z-index: 1;
     margin: 0;
   }
-}
-@media (max-width: 768px) {
-  .Banner {
-    height: 111px;
-    border-radius: 10px;
+
+  @include respond-to("mobile") {
+    height: $banner-height-mobile;
+    border-radius: $banner-radius-mobile;
     justify-content: left;
 
     p {
@@ -46,7 +44,7 @@
       justify-content: left;
       align-items: flex-start;
       width: 170px;
-      font-size: 24px;
+      font-size: $banner-text-size-mobile;
     }
   }
 }

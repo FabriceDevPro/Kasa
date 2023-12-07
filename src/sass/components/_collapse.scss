@@ -1,68 +1,73 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
 .collapse-container {
-  display: flex;
+  @include center-flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 80%;
-  margin: 0 auto; // Centrer le conteneur About
+  margin: 0 auto;
 }
 
 .collapsible {
   width: 100%;
-  margin-bottom: 10px; // Espace entre les sections
+  margin-bottom: 10px;
 }
 
 .collapsible-header {
-  background-color: #ff6060; // Rouge
+  background-color: $primary-color;
   color: white;
   padding: 10px 20px;
-  display: flex;
-  justify-content: space-between; // Espace entre le titre et l'icône
-  align-items: center; // Centre verticalement le titre et l'icône
+  @include center-flex;
+  justify-content: space-between;
   cursor: pointer;
-  border-radius: 5px; // Coins arrondis
+  border-radius: 5px;
   font-size: 1.2em;
 }
 
 .collapsible-icon {
-  font-size: 32px; // Taille de l'icône
+  font-size: 32px;
 }
 
 .collapsible-content {
-  color: #ff6060;
-  border-radius: 0 0 5px 5px; // Coins arrondis en bas
-  padding: 0 1em; // Ajoutez le padding ici pour l'inclure dans l'animation
+  color: $primary-color;
+  border-radius: 0 0 5px 5px;
+  padding: 0 1em;
   transform-origin: top;
   transition: transform 0.3s ease, height 0.3s ease;
   overflow: hidden;
-  height: 0; //
+  height: 0;
+
   &.open {
-    height: auto; // Quand le contenu est ouvert, la hauteur est automatique
-    padding-top: 1em; // Rétablissez le padding lorsque le contenu est ouvert
+    height: auto;
+    padding-top: 1em;
     padding-bottom: 1em;
     background-color: #f6f6f6;
   }
+
   .collapsible-inner {
-    transform: scaleY(0); // Commencez avec scaleY à 0 pour masquer le contenu
+    transform: scaleY(0);
   }
 
   &.open .collapsible-inner {
-    transform: scaleY(1); // Utilisez scaleY pour animer la hauteur
+    transform: scaleY(1);
   }
+
   p {
     padding: 0;
   }
+
   .no-bullets {
     list-style-type: none;
   }
 }
 
-@media (max-width: 1024px) {
+@include respond-to("tablet") {
   .collapse-container {
     width: 92%;
   }
 }
-@media (max-width: 768px) {
+
+@include respond-to("mobile") {
   .collapse-container {
     width: 100%;
   }

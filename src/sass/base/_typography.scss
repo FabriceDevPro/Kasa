@@ -1,1 +1,15 @@
+// Import de la police Google Montserrat
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+// Définition des variables typographiques
+$font-family-base: "Montserrat", sans-serif;
+$font-weight-normal: 400;
+$font-weight-bold: 500;
+$font-weight-Largebold: 700;
+$font-line-height: 146%;
+
+// Styles typographiques globaux
+body {
+  font-family: $font-family-base;
+  font-weight: $font-weight-normal;
+}

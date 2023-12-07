@@ -1,41 +1,38 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
 .carousel {
-  display: flex;
+  @include center-flex; // Utilisation du mixin center-flex
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100%;
-  min-height: 415px;
+  min-height: $carousel-height; // Utilisation de la variable $carousel-height
   position: relative;
-  border-radius: 20px;
+  border-radius: $carousel-border-radius; // Utilisation de la variable $carousel-border-radius
 
   button.arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center-flex; // Réutilisation du mixin center-flex
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    // font-size: 75px; // Ajustez la taille de l'icône
-    padding: 10px; // Ajustez le padding pour la taille de l'icône
+    background-color: $color-background-arrow; // Utilisation de la variable $color-background-arrow
+    color: $color-text; // Utilisation de la variable $color-text
+    padding: 10px;
     border-radius: 50%;
     border: none;
-    // outline: none;
+    outline: none;
 
     &.left {
       left: 10px;
-      cursor: pointer;
     }
     &.right {
       right: 10px;
-      cursor: pointer;
     }
+
     svg {
-      width: 3.9em; // La largeur est définie par la taille de la fonte
-      height: 4.9em; // La hauteur est définie par la taille de la fonte
+      width: $arrow-size; // Utilisation de la variable $arrow-size
+      height: $arrow-size;
     }
   }
 
@@ -46,29 +43,32 @@
     z-index: -1;
     object-fit: cover;
     object-position: center;
-    border-radius: 20px;
+    border-radius: $carousel-border-radius;
   }
+
   .image-counter {
     position: absolute;
     bottom: 10px;
-    left: 50%; // Position de départ au milieu
-    transform: translateX(-50%); // Décaler de 50% de sa propre largeur pour centrer
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+    left: 50%;
+    transform: translateX(-50%);
+    color: $color-text;
+    background-color: $color-background-arrow;
     padding: 5px 10px;
-    border-radius: 20px;
+    border-radius: $carousel-border-radius;
     font-size: 0.9em;
     z-index: 10;
   }
 }
-@media (max-width: 768px) {
+
+// Media query pour les modifications mobiles
+@include respond-to("mobile") {
   .carousel {
-    min-height: 255px;
+    min-height: $carousel-height-mobile;
 
     button.arrow {
       svg {
-        width: 1.5em; // La largeur est définie par la taille de la fonte
-        height: 1.5em; // La hauteur est définie par la taille de la fonte
+        width: $arrow-size-mobile;
+        height: $arrow-size-mobile;
       }
     }
 

@@ -1,8 +1,11 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+@use "../base/typography" as *;
+
 .LogementDetails {
-  display: flex;
+  @include center-flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
   width: 80%;
   margin: 50px 0;
 
@@ -15,29 +18,29 @@
       display: flex;
       flex-direction: row;
       margin-bottom: 30px;
+      justify-content: space-between;
 
       .description-title-location-tag {
         display: flex;
         flex-direction: column;
-        width: 80%;
 
         h1 {
-          color: #ff6060;
-          font-family: Montserrat;
-          font-size: 36px;
+          color: $primary-color;
+          font-family: $font-family-base;
+          font-size: $logement-title-font-size;
           font-style: normal;
-          font-weight: 500;
-          line-height: 142.6%; /* 51.336px */
+          font-weight: $font-weight-bold;
+          line-height: $font-line-height;
           margin: 0;
         }
 
         .location {
-          color: #ff6060;
-          font-family: Montserrat;
-          font-size: 18px;
+          color: $primary-color;
+          font-family: $font-family-base;
+          font-size: $logement-location-font-size;
           font-style: normal;
-          font-weight: 500;
-          line-height: 142.6%; /* 25.668px */
+          font-weight: $font-weight-bold;
+          line-height: $font-line-height;
 
           p {
             margin: 0;
@@ -52,14 +55,14 @@
           span {
             padding: 0 10px;
             border-radius: 10px;
-            background: #ff6060;
-            color: #fff;
+            background: $primary-color;
+            color: white;
             text-align: center;
-            font-family: Montserrat;
-            font-size: 14px;
+            font-family: $font-family-base;
+            font-size: $logement-tags-font-size;
             font-style: normal;
-            font-weight: 500;
-            line-height: 142.6%; /* 19.964px */
+            font-weight: $font-weight-bold;
+            line-height: $font-line-height;
             margin-right: 10px;
           }
         }
@@ -68,7 +71,7 @@
       .description-host-rating {
         display: flex;
         flex-direction: column;
-        width: 20%;
+        gap: 10px;
 
         .description-host {
           display: flex;
@@ -76,37 +79,35 @@
           align-items: center;
 
           .host-name {
-            color: #ff6060;
+            color: $primary-color;
             text-align: right;
-            font-family: Montserrat;
-            font-size: 18px;
+            font-family: $font-family-base;
+            font-size: $logement-host-name-font-size;
             font-style: normal;
-            font-weight: 500;
-            line-height: 142.6%; /* 25.668px */
+            font-weight: $font-weight-bold;
+            line-height: $font-line-height;
             margin-right: 10px;
           }
 
           .host-picture {
-            width: 64px; /* ou toute autre taille */
+            width: 64px;
             height: 64px;
-            border-radius: 50%; /* pour rendre l'image circulaire */
+            border-radius: 50%;
           }
         }
 
         .description-rating {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include center-flex;
 
           .star {
-            color: #dddddd; /* Couleur de fond grise pour les étoiles non sélectionnées */
+            color: $color-star-full;
             margin: 0 10px;
-            font-size: 36px;
+            font-size: $logement-star-size;
             text-align: right;
           }
 
           .star.filled {
-            color: #ff6060; /* Couleur rouge pour les étoiles sélectionnées */
+            color: $primary-color;
           }
         }
       }
@@ -119,58 +120,27 @@
       gap: 76px;
     }
   }
-}
 
-@media (max-width: 768px) {
-  .LogementDetails {
+  @media (max-width: $mobile-breakpoint) {
+    width: $mobile-screen-width;
     margin: 27px 0;
-    width: 95%;
     .description {
       .description-information {
         flex-direction: column;
 
         .description-title-location-tag {
-          display: flex;
-          flex-direction: column;
           width: 100%;
           margin-bottom: 10px;
-
-          h1 {
-            font-size: 18px;
-          }
-
-          .location {
-            font-size: 14px;
-          }
-          .tags {
-            span {
-              font-size: 10px;
-            }
-          }
         }
 
         .description-host-rating {
-          display: flex;
-          flex-direction: row-reverse;
           width: 100%;
+          flex-direction: row-reverse;
           justify-content: space-between;
-
-          .description-host {
-            .host-name {
-              font-size: 12px;
-            }
-          }
-          .description-rating {
-            .star {
-              font-size: 18px;
-              margin: 0 5px;
-            }
-          }
         }
       }
 
       .description-collapse {
-        display: flex;
         flex-direction: column;
         gap: 20px;
       }

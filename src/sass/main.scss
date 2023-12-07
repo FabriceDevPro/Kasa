@@ -1,14 +1,21 @@
-@use "utils/_Variables" as *;
-@use "utils/_Mixin" as Mixin;
-@use "utils/_Keyframes";
+@use "utils/variables" as *; // Assume que les variables seront utilisées globalement
+@use "utils/mixins" as *; // Assume que les mixins seront utilisés globalement
+@use "utils/keyframes";
+
 @use "base/typography";
+
+// Les composants
 @use "components/collapse";
 @use "components/carousel";
+
+// Le layout
 @use "layout/loader";
 @use "layout/header";
 @use "layout/banner";
 @use "layout/navigation";
 @use "layout/footer";
+
+// Les pages
 @use "pages/index";
 @use "pages/home";
 @use "pages/about";

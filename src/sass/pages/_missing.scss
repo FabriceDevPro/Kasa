@@ -1,3 +1,6 @@
+@use "../utils/variables" as *;
+@use "../base/typography" as *;
+
 .MissingPage {
   display: flex;
   width: 100%;
@@ -6,42 +9,43 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  margin: 139px 0;
-  gap: 139px;
+  margin: $missing-page-margin;
+  gap: $missing-page-gap;
+
   .error {
     display: flex;
-    width: 597px;
-    height: 263px;
+    width: $error-width;
+    height: $error-height;
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
+
     h1 {
-      color: #ff6060;
+      color: $primary-color;
       text-align: center;
-      font-family: Montserrat;
-      font-size: 288px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 142.6%; /* 410.688px */
+      font-family: $font-family-base;
+      font-size: $error-title-font-size;
+      font-weight: $font-weight-Largebold;
+      line-height: $font-line-height;
       margin: 0;
     }
   }
+
   p {
-    color: #ff6060;
-    font-family: Montserrat;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 142.6%; /* 51.336px */
+    color: $primary-color;
+    font-family: $font-family-base;
+    font-size: $error-text-font-size;
+    font-weight: $font-weight-bold;
+    line-height: $font-line-height;
     margin: 0;
   }
+
   .link {
-    color: #ff6060;
-    font-family: Montserrat;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 142.6%; /* 25.668px */
+    color: $primary-color;
+    font-family: $font-family-base;
+    font-size: $link-font-size;
+    font-weight: $font-weight-bold;
+    line-height: $font-line-height;
     text-decoration-line: underline;
   }
 }

@@ -1,38 +1,41 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+@use "../base/typography" as *;
+
 .navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #ff6060;
-  font-family: Montserrat;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 142.6%; /* 34.224px */
+  color: $navigation-text-color;
+  font-family: $font-family-base;
+  font-size: $navigation-font-size;
+  font-weight: $font-weight-bold;
+  line-height: $font-line-height; // Vous pouvez également définir cette valeur comme une variable si elle est réutilisée
 
   ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 30px; // Espace entre les éléments de la liste
+    gap: $navigation-gap;
   }
 
   a {
-    color: #ff6060;
+    color: $navigation-text-color;
     text-decoration: none;
 
     &.nav-active {
       text-decoration: underline;
     }
   }
-}
-@media (max-width: 768px) {
-  .navigation {
-    font-size: 12px;
+
+  @include respond-to("mobile") {
+    font-size: $navigation-font-size-mobile;
     text-transform: uppercase;
     justify-content: space-around;
+
     ul {
-      gap: 20px; // Espace entre les éléments de la liste
+      gap: $navigation-gap-mobile;
     }
   }
 }

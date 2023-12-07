@@ -1,0 +1,144 @@
+@use "../base/typography" as *;
+// Couleurs
+$color-background-arrow: rgba(0, 0, 0, 0.5);
+$color-text: white;
+$primary-color: #ff6060;
+$color-background: #f6f6f6;
+$color-star-full: #e3e3e3;
+$color-footer: black;
+
+//Dimension
+$body-max-width: 1440px;
+$desktop-screen-width: 80%;
+$tablet-screen-width: 87%;
+$mobile-screen-width: 95%;
+
+// Tailles et dimensions pour Header
+$header-width: $desktop-screen-width;
+$header-padding-top: 45px;
+$header-gap: 50px;
+$logo-width: 210.322px;
+$logo-height: 68px;
+
+// Pour la vue mobile
+$header-padding-top-mobile: 20px;
+$header-width-mobile: $mobile-screen-width;
+$header-gap-mobile: 27px;
+$logo-width-mobile: 145px;
+$logo-height-mobile: 46.88px;
+
+// Tailles et dimensions pour Loader
+$loader-bg-color: rgba(255, 255, 255, 0.9); // Couleur d'arrière-plan du loader
+$loader-size: 7.5rem; // Taille du loader
+$loader-border: 1rem; // Épaisseur de la bordure du loader
+$loader-animation-duration: 2s; // Durée de l'animation de rotation
+$loader-fade-out-duration: 1s; // Durée de l'animation de disparition
+$loader-z-index: 9999; // Z-index du loader
+
+// Tailles et dimensions Nour navigation
+$navigation-text-color: $primary-color; // Couleur de texte de la navigation
+$navigation-font-size: 24px; // Taille de police normale
+$navigation-font-size-mobile: 12px; // Taille de police pour mobile
+$navigation-gap: 30px; // Espace entre les éléments
+$navigation-gap-mobile: 20px; // Espace entre les éléments pour mobile
+
+// Tailles et dimensions pour Carousel
+$carousel-height: 415px;
+$carousel-height-mobile: 255px;
+$carousel-border-radius: 20px;
+$arrow-size: 3.9em;
+$arrow-size-mobile: 1.5em;
+
+// Tailles et dimensions pour Collapse
+$collapse-bg-color: $primary-color; // Rouge
+$collapse-text-color: $color-text;
+$collapse-radius: 5px;
+$collapse-icon-size: 32px;
+$collapse-transition-time: 0.3s;
+$collapse-transition-ease: ease;
+
+// Tailles et dimensions pour Banner
+$banner-height: 223px;
+$banner-height-mobile: 111px;
+$banner-radius: 25px;
+$banner-radius-mobile: 10px;
+$banner-bg-overlay: rgba(0, 0, 0, 0.3);
+$banner-text-color: $color-text;
+$banner-text-size: 48px;
+$banner-text-size-mobile: 24px;
+
+// Tailles et dimensions pour About
+$about-width: $desktop-screen-width;
+$about-margin: 40px auto;
+
+// Pour les vues tablette et mobile
+$about-width-tablet: $tablet-screen-width;
+$about-margin-tablet: 30px auto;
+$about-width-mobile: $mobile-screen-width;
+$about-margin-mobile: 20px auto;
+
+// Tailles et dimensions pour Home
+$home-bg-color: $color-background;
+$home-width: $desktop-screen-width;
+$home-margin: 43px auto 50px;
+$home-border-radius: 25px;
+$card-gap: 50px 60px;
+$card-container-margin: 56px 50px 43px;
+$card-border-radius: 10px;
+$card-title-bg-color: rgba(0, 0, 0, 0.3);
+$card-title-font-size: 16px;
+$card-title-line-height: $font-line-height;
+
+// Pour les vues tablette et mobile
+$home-width-tablet: $desktop-screen-width;
+$home-width-mobile: $mobile-screen-width;
+$card-container-margin-tablet: 20px 0px 43px;
+$card-container-margin-mobile: 20px 0px 43px;
+$card-gap-tablet: 50px 60px;
+$card-gap-mobile: 22px;
+
+// Tailles et dimensions pour LogementDetail
+$logement-details-width: $desktop-screen-width;
+$logement-details-margin: 50px 0;
+$logement-title-color: $primary-color;
+$logement-title-font-size: 36px;
+$logement-location-font-size: 18px;
+$logement-tags-font-size: 14px;
+$logement-host-name-font-size: 18px;
+$logement-star-size: 36px;
+$logement-star-color: $color-star-full;
+$logement-star-filled-color: $logement-title-color;
+
+// Pour la vue mobile
+$logement-details-width-mobile: $mobile-screen-width;
+$logement-details-margin-mobile: 27px 0;
+$logement-title-font-size-mobile: 18px;
+$logement-location-font-size-mobile: 14px;
+$logement-tags-font-size-mobile: 10px;
+$logement-host-name-font-size-mobile: 12px;
+$logement-star-size-mobile: 18px;
+
+// Tailles et dimensions pour Missing
+$missing-page-margin: 139px 0;
+$missing-page-gap: 139px;
+$error-width: 597px;
+$error-height: 263px;
+$primary-color: $primary-color; // Si ce n'est pas déjà défini
+$error-title-font-size: 288px;
+$error-text-font-size: 36px;
+$link-font-size: 18px;
+
+// Tailles et dimensions pour Footer
+$footer-bg-color: $color-footer;
+$footer-text-color: $color-text;
+$footer-height: 209px;
+$footer-gap: 28.556px;
+$footer-logo-height: 39.444px;
+$footer-font-size: 24px;
+$footer-font-size-mobile: 12px;
+$footer-container-mobile-width: 100px;
+$footer-container-mobile-height: 46px;
+
+// Breakpoints pour les médias queries
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1024px;
