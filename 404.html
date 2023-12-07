@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kasa</title>
   <script>
-    if (!location.href.includes("/index.html")) {
-      document.location.href = '/Kasa/index.html' + location.pathname.replace('/Kasa', '');
+    if (location.pathname.startsWith('/Kasa/') && !location.pathname.endsWith('.html')) {
+      location.replace('/Kasa/index.html' + location.hash);
     }
   </script>
 </head>
