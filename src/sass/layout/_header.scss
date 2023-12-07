@@ -19,6 +19,10 @@ header {
     @include center-flex;
     width: $logo-width;
     height: $logo-height;
+    img {
+      width: $logo-width;
+      height: $logo-height;
+    }
   }
 
   @include respond-to("mobile") {
@@ -29,6 +33,11 @@ header {
     .logo {
       width: $logo-width-mobile;
       height: $logo-height-mobile;
+      justify-content: flex-start;
+      img {
+        width: $logo-width-mobile;
+        height: $logo-height-mobile;
+      }
     }
   }
 }

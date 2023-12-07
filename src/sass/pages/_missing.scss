@@ -1,4 +1,5 @@
 @use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 @use "../base/typography" as *;
 
 .MissingPage {
@@ -38,6 +39,7 @@
     font-weight: $font-weight-bold;
     line-height: $font-line-height;
     margin: 0;
+    text-align: center;
   }
 
   .link {
@@ -47,5 +49,24 @@
     font-weight: $font-weight-bold;
     line-height: $font-line-height;
     text-decoration-line: underline;
+  }
+  @include respond-to("mobile") {
+    margin: 113px 0px;
+    gap: 113px;
+
+    .error {
+      width: 198px;
+      height: 99px;
+      h1 {
+        font-size: 96px;
+      }
+    }
+    p {
+      font-size: 18px;
+      width: 65%;
+    }
+    .link {
+      font-size: 14px;
+    }
   }
 }

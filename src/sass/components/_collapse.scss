@@ -16,16 +16,18 @@
 .collapsible-header {
   background-color: $primary-color;
   color: $color-text;
-  padding: 10px 20px;
+  padding: 0px 10px;
   @include center-flex;
   justify-content: space-between;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 1.2em;
 }
 
 .collapsible-icon {
-  font-size: 32px;
+  svg {
+    height: 2em;
+    width: 2em;
+  }
 }
 
 .collapsible-content {

@@ -118,6 +118,11 @@
       flex-direction: row;
       justify-content: space-between;
       gap: 76px;
+      .collapsible {
+        .collapsible-header {
+          padding: 0px 10px;
+        }
+      }
     }
   }
 
@@ -137,12 +142,23 @@
           width: 100%;
           flex-direction: row-reverse;
           justify-content: space-between;
+          .description-rating {
+            .star {
+              font-size: 20px;
+              margin: 0 5px;
+            }
+          }
         }
       }
 
       .description-collapse {
         flex-direction: column;
         gap: 20px;
+        .collapsible {
+          .collapsible-header {
+            padding: 0px 10px;
+          }
+        }
       }
     }
   }
