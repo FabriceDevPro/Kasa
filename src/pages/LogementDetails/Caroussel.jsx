@@ -14,11 +14,32 @@ const Carousel = ({ images, title }) => {
     setCurrentImageIndex((prevIndex) => (prevIndex === totalImages - 1 ? 0 : prevIndex + 1));
   };
 
+  const handleKeyDown = (e) => {
+    if (document.activeElement.classList.contains("carousel")) {
+      if (e.key === "ArrowLeft") {
+        goToPreviousImage();
+      } else if (e.key === "ArrowRight") {
+        goToNextImage();
+      }
+    }
+  };
+
   return (
-    <div className="carousel">
-      {totalImages > 1 && <FaAngleLeft className="arrow left" onClick={goToPreviousImage} />}
+    <div
+      className="carousel"
+      tabIndex="0" // Important pour rendre le div focusable
+      onKeyDown={handleKeyDown}>
+      {totalImages > 1 && (
+        <button aria-label="Previous image" onClick={goToPreviousImage} className="arrow left">
+          <FaAngleLeft />
+        </button>
+      )}
       <img className="carousel-img" src={images[currentImageIndex]} alt={title} />
-      {totalImages > 1 && <FaAngleRight className="arrow right" onClick={goToNextImage} />}
+      {totalImages > 1 && (
+        <button aria-label="Next image" onClick={goToNextImage} className="arrow right">
+          <FaAngleRight />
+        </button>
+      )}
       {totalImages > 1 && (
         <div className="image-counter">
           {currentImageIndex + 1} / {totalImages}

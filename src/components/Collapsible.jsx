@@ -9,14 +9,25 @@ const Collapsible = ({ title, children }) => {
   const toggleOpen = () => {
     setIsOpen(!isOpen);
   };
+  const contentId = "uniqueContentId";
 
   return (
     <div className="collapsible">
-      <div className="collapsible-header" onClick={toggleOpen}>
+      <div
+        className="collapsible-header"
+        onClick={toggleOpen}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            toggleOpen();
+          }
+        }}
+        tabIndex="0"
+        aria-expanded={isOpen}
+        aria-controls={contentId}>
         {title}
         <span className="collapsible-icon">{isOpen ? <MdExpandLess /> : <MdExpandMore />}</span>
       </div>
-      <div className={`collapsible-content ${isOpen ? "open" : ""}`} ref={contentRef} style={{ transform: isOpen ? "scaleY(1)" : "scaleY(0)" }}>
+      <div id={contentId} className={`collapsible-content ${isOpen ? "open" : ""}`} ref={contentRef} style={{ transform: isOpen ? "scaleY(1)" : "scaleY(0)" }}>
         <div className="collapsible-inner">{children}</div>
       </div>
     </div>
@@ -29,5 +40,3 @@ Collapsible.propTypes = {
 };
 
 export default Collapsible;
-
-// ... propTypes et export

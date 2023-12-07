@@ -8,17 +8,22 @@
   position: relative;
   border-radius: 20px;
 
-  .arrow {
+  button.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5); // Ajustez la couleur et l'opacité
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    font-size: 75px;
-    padding: 5px; // Ajustez le padding
-    border-radius: 50%; // Cercles autour des flèches
+    // font-size: 75px; // Ajustez la taille de l'icône
+    padding: 10px; // Ajustez le padding pour la taille de l'icône
+    border-radius: 50%;
+    border: none;
+    // outline: none;
 
     &.left {
       left: 10px;
@@ -27,6 +32,10 @@
     &.right {
       right: 10px;
       cursor: pointer;
+    }
+    svg {
+      width: 3.9em; // La largeur est définie par la taille de la fonte
+      height: 4.9em; // La hauteur est définie par la taille de la fonte
     }
   }
 
@@ -56,8 +65,11 @@
   .carousel {
     min-height: 255px;
 
-    .arrow {
-      font-size: 24px;
+    button.arrow {
+      svg {
+        width: 1.5em; // La largeur est définie par la taille de la fonte
+        height: 1.5em; // La hauteur est définie par la taille de la fonte
+      }
     }
 
     .image-counter {

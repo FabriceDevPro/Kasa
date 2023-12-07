@@ -1,15 +1,9 @@
 import { Footer_Logo } from "../assets/images";
 
 const Footer = () => {
-  // const anneeActuelle = new Date().getFullYear();
-  // const anneeDebut = 2020;
-  // let copyrightText = `© ${anneeDebut}`;
+  const anneeActuelle = new Date().getFullYear();
 
-  // if (anneeActuelle > anneeDebut) {
-  //   copyrightText += ` - ${anneeActuelle}`;
-  // }
-
-  const copyrightText = ` © 2020 Kasa. All rights reserved `;
+  const copyrightText = ` © ${anneeActuelle} Kasa. All rights reserved `;
 
   return (
     <footer>
