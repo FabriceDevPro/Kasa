@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kasa</title>
   <script>
-    if (location.pathname.startsWith('/Kasa/') && !location.pathname.includes('/index.html')) {
+    if (!location.pathname.endsWith('.html')) {
       location.replace('/Kasa/index.html#' + location.pathname.slice(6) + location.search);
     }
   </script>
