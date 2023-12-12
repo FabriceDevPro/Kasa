@@ -24,9 +24,15 @@
 }
 
 .collapsible-icon {
+  transition: transform 0.3s ease-in-out;
+
   svg {
     height: 2em;
     width: 2em;
+  }
+
+  &.open {
+    transform: rotate(-180deg); // Pointe vers le bas quand ouvert
   }
 }
 
@@ -35,14 +41,14 @@
   border-radius: 0 0 5px 5px;
   padding: 0 1em;
   transform-origin: top;
-  transition: transform 0.3s ease, height 0.3s ease;
+  transition: height 0.3s ease, opacity 0.3s ease;
   overflow: hidden;
-  height: 0;
+  height: 0; // initialisation de la hauteur à 0
+  opacity: 0;
 
   &.open {
-    height: auto;
+    opacity: 1;
     padding-top: 1em;
-    padding-bottom: 1em;
     background-color: $color-background;
   }
 

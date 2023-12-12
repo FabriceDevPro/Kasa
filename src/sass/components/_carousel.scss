@@ -35,7 +35,10 @@
       height: $arrow-size;
     }
   }
-
+  .slide-transition {
+    transition: transform 0.3s ease-in-out;
+    transform: scaleX(1);
+  }
   .carousel-img {
     position: absolute;
     width: 100%;

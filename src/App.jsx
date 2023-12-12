@@ -14,7 +14,6 @@ function App() {
     <>
       <BrowserRouter basename={basename}>
         <Header />
-        {/* <Header /> */}
         <Routes>
           {/* Redirection de la racine vers /Accueil */}
           <Route path="/" element={<Navigate to="/Accueil" replace />} />
