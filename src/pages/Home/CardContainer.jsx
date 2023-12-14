@@ -1,4 +1,4 @@
-import accommodationsData from "../../data/data.json"; // Ajustez le chemin si nécessaire
+import accommodationsData from "../../data/data.json";
 import Card from "./Card";
 
 const CardContainer = () => {

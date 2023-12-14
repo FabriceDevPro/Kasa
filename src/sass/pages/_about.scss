@@ -15,5 +15,17 @@
   @include respond-to("mobile") {
     width: $about-width-mobile;
     margin: $about-margin-mobile;
+
+    .collapse-container {
+      .collapsible {
+        .collapsible-header {
+          padding: 0px 10px;
+          font-size: 13px;
+        }
+        .collapsible-content p {
+          font-size: 13px;
+        }
+      }
+    }
   }
 }

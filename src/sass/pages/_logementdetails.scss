@@ -139,12 +139,26 @@
           h1 {
             font-size: 18px;
           }
+          .location {
+            font-size: 14px;
+            line-height: 142.6%;
+          }
+          .tags {
+            span {
+              font-size: 10px;
+            }
+          }
         }
 
         .description-host-rating {
           width: 100%;
           flex-direction: row-reverse;
           justify-content: space-between;
+          .description-host {
+            .host-name {
+              font-size: 12px;
+            }
+          }
           .description-rating {
             .star {
               font-size: 20px;
@@ -160,6 +174,10 @@
         .collapsible {
           .collapsible-header {
             padding: 0px 10px;
+            font-size: 13px;
+          }
+          .collapsible-inner {
+            font-size: 13px;
           }
         }
       }
